@@ -22,25 +22,23 @@ const AddFighter = () => {
           }).then((response)=>{
             
         alert('fighter added to database')
-        
-        })
-        
-        
-      }
-        const onHandleSubmit = (e) => {
-            e.preventDefault()
             setName("")
             setRecord("")
             setAge("0")
             setHeight("")
             setWeightClass("")
             setReach("")
-        }
+        
+        })
+        
+        
+      }
+        
     return(
         <div>
             <h1>Add a fighter to Database</h1>
             <div>
-        <form onSubmit={onHandleSubmit}>
+        <form>
           <input value={name} type="text" placeholder='name' onChange={(e)=> { setName(e.target.value)}}></input>
           <input value={record} type="text" placeholder='record' onChange={(e)=> { setRecord(e.target.value)}}></input>
           <input value={age} type="number" placeholder='age' onChange={(e)=> { setAge(e.target.value)}}></input>

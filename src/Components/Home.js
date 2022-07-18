@@ -1,5 +1,7 @@
 import {useEffect, useState} from 'react'
 import Axios from 'axios'
+import FighterCard from './FighterCard'
+
 
 const Home = () => {
  const [listOfFighters, setListOfFighters] = useState([])
@@ -7,25 +9,19 @@ const Home = () => {
       
  useEffect(() => {
   Axios.get("http://localhost:3001/getFighters").then((response)=>{
-       setListOfFighters(response.data)
+    setListOfFighters(response.data)
           })
+          
         }, [])
 
 
-    return(
+        return(
         <div className="fighterList">
-        {listOfFighters.map((fighter) =>{
-          return (
-            <div className="fighterDetails">
-              <h1>Name: {fighter.name}</h1>
-              <h1>Record: {fighter.record}</h1>
-              <h1>Age: {fighter.age}</h1>
-              <h1>Height: {fighter.height}</h1>
-              <h1>Weightclass: {fighter.weightClass}</h1>
-              <h1>Reach: {fighter.reach}</h1>
-            </div>
-          )
-        })}
+         {listOfFighters.map((fighter,index)=>{
+            return(
+            <FighterCard key={index} fighter={fighter} />
+            )
+         })}
       
       </div>
     )
