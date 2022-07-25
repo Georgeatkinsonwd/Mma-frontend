@@ -31,8 +31,10 @@ const Home = () => {
           </div>
           <label name="weight-class">Choose Weightclass:</label>
           <select value={selectOption} onChange={handleChange}>
+            <option value="Featherweight">Featherweight</option>
             <option value="Lightweight">Lightweight</option>
             <option value="Welterweight">Welterweight</option>
+            
           </select>
           <div className="listOfFighters">
           {listOfFighters.filter(fighter => fighter.weightClass === selectOption).map((fighter,index)=>{ 
