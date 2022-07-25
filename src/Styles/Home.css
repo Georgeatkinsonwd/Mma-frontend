@@ -1,0 +1,5 @@
+
+.listOfFighters {
+    display:flex;
+    flex-wrap:wrap;
+}

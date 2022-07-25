@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import Axios from 'axios'
 import FighterCard from './FighterCard'
+import '../Styles/Home.css'
 
 
 const Home = () => {
@@ -24,7 +25,7 @@ const Home = () => {
 
 
         return(
-        <div className="fighterList">
+        <div>
           <div>
             <p>{`you have selected ${selectOption}`}</p>
           </div>
@@ -33,10 +34,11 @@ const Home = () => {
             <option value="Lightweight">Lightweight</option>
             <option value="Welterweight">Welterweight</option>
           </select>
+          <div className="listOfFighters">
           {listOfFighters.filter(fighter => fighter.weightClass === selectOption).map((fighter,index)=>{ 
             return( <FighterCard key={index} fighter={fighter} /> 
             )})}
-          
+          </div>
       </div>
     )
   

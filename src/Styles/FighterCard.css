@@ -1,0 +1,7 @@
+.fighterDetails {
+    display:flex;
+    font-size: 10px;
+    border: 1px solid red;
+    width:33%;
+    text-align:center;
+  }
