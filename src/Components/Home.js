@@ -6,7 +6,7 @@ import '../Styles/Home.css'
 
 const Home = () => {
  const [listOfFighters, setListOfFighters] = useState([])
- const [selectOption, setSelectOption] = useState("Lightweight")
+ const [selectOption, setSelectOption] = useState("")
 
       
  useEffect(() => {
@@ -27,10 +27,10 @@ const Home = () => {
         return(
         <div>
           <div>
-            <p>{`you have selected ${selectOption}`}</p>
           </div>
-          <label name="weight-class">Choose Weightclass:</label>
+          <label name="weight-class">Select a Weightclass to see top 10 in that divison</label>
           <select value={selectOption} onChange={handleChange}>
+            <option>Select Weightclass</option>
             <option value="Featherweight">Featherweight</option>
             <option value="Lightweight">Lightweight</option>
             <option value="Welterweight">Welterweight</option>

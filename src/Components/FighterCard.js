@@ -9,13 +9,21 @@ const FighterCard = ({fighter}) => {
             <img alt="fighterPic" src={fighter.imgSrc}></img>
             </div>
             <div className="detailsContainer">
-            <h1>Name:{fighter.name}</h1>
-            <h1>Nickname:{fighter.nickname}</h1>
-            <h1>Rank#:{fighter.rank}</h1>
-            <h1>From:{fighter.nationality}</h1>
-            <h1>Record:{fighter.record}</h1>
-            <h1>Age:{fighter.age}</h1>
-            <h1>Height:{fighter.height}</h1>
+            <div className="fighterNames">   
+            <span className="fighterName">{fighter.name}</span>
+            <div className="nickNash">
+            <span>{fighter.nickname}</span>
+            <span>From:{fighter.nationality}</span>
+            </div>
+            </div> 
+            <div className="recordRank">
+            <span>Rank#:{fighter.rank}</span>
+            <span>Record:{fighter.record}</span>
+            </div>
+            <div className="ageHeight">
+            <span>Age:{fighter.age}</span>
+            <span>Height:{fighter.height}</span>
+            </div>
             </div>
             
             

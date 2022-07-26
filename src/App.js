@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1>UFC APP</h1>
+        <h1>UFC Top 10</h1>
         <nav>
           <Link to="/">Home</Link>
           <Link to="/addFighter">Add a Fighter</Link>
