@@ -1,6 +1,13 @@
 
 .listOfFighters {
+    margin-top:20px;
     display:flex;
     flex-wrap:wrap;
     width:100%;
+}
+
+.intro{
+    height:50px;
+    font-size:20px;
+    font-weight: bold;
 }

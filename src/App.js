@@ -9,13 +9,10 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <nav className="navbar">
         <h1>UFC Top 10</h1>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/addFighter">Add a Fighter</Link>
-        </nav>
-        <nav>
-
+          <Link className="navLinks" to="/">Home</Link>
+          <Link className="navLinks" to="/addFighter">Add a Fighter</Link>
         </nav>
       <Routes>
       <Route path="/" element = {<Home/>} />

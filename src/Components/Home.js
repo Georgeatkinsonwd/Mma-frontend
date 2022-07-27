@@ -19,15 +19,19 @@ const Home = () => {
   const handleChange = (e) => {
     setSelectOption(e.target.value)
     
-  
+  }
+
+  const sortOrder = () => {
+    let newOrder = listOfFighters.sort((a,b)=>{
+      return b.rank - a.rank
+    })
+    return newOrder
   }
 
 
 
         return(
-        <div>
-          <div>
-          </div>
+        <div className="intro">
           <label name="weight-class">Select a Weightclass to see top 10 in that divison</label>
           <select value={selectOption} onChange={handleChange}>
             <option>Select Weightclass</option>
@@ -37,7 +41,7 @@ const Home = () => {
             
           </select>
           <div className="listOfFighters">
-          {listOfFighters.filter(fighter => fighter.weightClass === selectOption).map((fighter,index)=>{ 
+          {sortOrder().filter(fighter => fighter.weightClass === selectOption).map((fighter,index)=>{ 
             return( <FighterCard key={index} fighter={fighter} /> 
             )})}
           </div>
