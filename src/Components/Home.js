@@ -7,12 +7,10 @@ import '../Styles/Home.css'
 const Home = () => {
  const [listOfFighters, setListOfFighters] = useState([])
  const [selectOption, setSelectOption] = useState("")
-
       
  useEffect(() => {
   Axios.get("http://localhost:3001/getFighters").then((response)=>{
     setListOfFighters(response.data)
-    
           })   
         }, [])
 
@@ -23,7 +21,7 @@ const Home = () => {
 
   const sortOrder = () => {
     let newOrder = listOfFighters.sort((a,b)=>{
-      return b.rank - a.rank
+      return a.rank - b.rank
     })
     return newOrder
   }

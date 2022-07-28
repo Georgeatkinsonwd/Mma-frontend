@@ -26,9 +26,11 @@
     width:100%;
     margin:0;
     background-color:#1E73BE;
+    height:25%;
   }
 
   .fighterName {
+    font-size:18px;
     display:block;
     text-decoration: underline;
     font-weight:bold;
@@ -47,5 +49,29 @@
   .ageHeight{
     display:flex;
     justify-content: space-evenly;
-    margin-bottom:60px;
+  }
+
+
+  .changeRank{
+    display:flex;
+    justify-content: space-evenly;
+    margin-bottom:30px;
+  }
+
+
+  .arrowUp, .arrowDown {
+    font-size:12px;
+  }
+
+  .arrowUp:hover, .arrowDown:hover {
+    color:white;
+  }
+
+  .btnUp:hover{
+    background-color:green;
+  }
+
+
+  .btnDown:hover{
+    background-color:red;
   }
