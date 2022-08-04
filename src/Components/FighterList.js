@@ -18,7 +18,7 @@ const FighterList = ({weightclass}) => {
     return (
         <div className="listOfFighters">
           {listOfFighters.sort((a,b)=>{return a.rank - b.rank}).filter(fighter => fighter.weightClass === weightclass).map((fighter,index)=>{ 
-            return( <FighterCard key={index} fighter={fighter} /> 
+            return( <FighterCard key={index} ranking={fighter.rank} fighter={fighter} /> 
             )})}
           </div>
     )

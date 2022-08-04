@@ -1,8 +1,9 @@
 import '../Styles/FighterCard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowDown, faArrowUp} from '@fortawesome/free-solid-svg-icons'
-import {useState, useEffect} from 'react'
-// import { Axios } from 'axios'
+import {useState} from 'react'
+import axios from 'axios'
+
 
 
 
@@ -10,9 +11,15 @@ const FighterCard = ({fighter}) => {
     const [changeRank, setChangeRank] = useState(fighter.rank)
     
 
+
+
     const increaseRank = () => {
-        if (changeRank >=2){
-        setChangeRank(changeRank - 1)}
+        const id = fighter._id
+        axios.put(`http://localhost:3001/increaseRank/${id}`, {
+            rank: changeRank - 1
+        }).then((response)=>{
+            setChangeRank(response.data.rank)
+        })
     }
 
     
