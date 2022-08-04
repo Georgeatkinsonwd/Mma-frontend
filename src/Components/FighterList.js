@@ -6,19 +6,25 @@ import '../Styles/FighterList.css'
 
 const FighterList = ({weightclass}) => {
     const [listOfFighters, setListOfFighters] = useState([])
-    console.log(weightclass)
+  
 
 
+   
     useEffect(() => {
         Axios.get("http://localhost:3001/getFighters").then((response)=>{
           setListOfFighters(response.data)
                 })   
               }, [])
+    
+    useEffect(() => {
+      console.log('use effect ran')
+    })
+  
 
     return (
         <div className="listOfFighters">
-          {listOfFighters.sort((a,b)=>{return a.rank - b.rank}).filter(fighter => fighter.weightClass === weightclass).map((fighter,index)=>{ 
-            return( <FighterCard key={index} ranking={fighter.rank} fighter={fighter} /> 
+          {listOfFighters.sort((a,b)=> {return a.rank - b.rank}).filter(fighter => fighter.weightClass === weightclass).map((fighter,index)=>{ 
+            return( <FighterCard key={index} fighter={fighter} /> 
             )})}
           </div>
     )

@@ -15,17 +15,25 @@ const FighterCard = ({fighter}) => {
 
     const increaseRank = () => {
         const id = fighter._id
-        axios.put(`http://localhost:3001/increaseRank/${id}`, {
+        if(changeRank >1){
+        axios.put(`http://localhost:3001/changeRank/${id}`, {
             rank: changeRank - 1
         }).then((response)=>{
             setChangeRank(response.data.rank)
         })
     }
+    }
 
     
     const decreaseRank = () => {
-        if(changeRank <10)
-        setChangeRank(changeRank + 1)
+        const id = fighter._id
+        if(changeRank <10){
+        axios.put(`http://localhost:3001/changeRank/${id}`, {
+            rank: changeRank + 1
+        }).then((response)=>{
+            setChangeRank(response.data.rank)
+        })
+    }
     }
     return(
         <div className="fighterDetails">
