@@ -7,7 +7,7 @@ import axios from 'axios'
 
 
 
-const FighterCard = ({fighter}) => {
+const FighterCard = ({fighter, updateOrder}) => {
     const [changeRank, setChangeRank] = useState(fighter.rank)
     
 
@@ -20,6 +20,7 @@ const FighterCard = ({fighter}) => {
             rank: changeRank - 1
         }).then((response)=>{
             setChangeRank(response.data.rank)
+            updateOrder()
         })
     }
     }
@@ -32,6 +33,7 @@ const FighterCard = ({fighter}) => {
             rank: changeRank + 1
         }).then((response)=>{
             setChangeRank(response.data.rank)
+            updateOrder()
         })
     }
     }
