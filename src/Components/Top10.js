@@ -1,11 +1,12 @@
+import Selection from './Selection'
 import '../Styles/Home.css'
 
 
-const Home = () => {
+const Top10 = () => {
  
         return(
         <div className="intro">
-          <h1>Homepage</h1>
+          <Selection />
       </div>
     )
   
@@ -13,7 +14,7 @@ const Home = () => {
 }
 
 
-export default Home
+export default Top10
 
 
 // 

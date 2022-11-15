@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.updateCard {
+    border: 1px solid black;
+    width:33.33%;
+}
+
+
+.updateContainer {
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+.deleteBtn {
+    background-color:red;
+}
+
+.recordInput {
+    width:15%;
+}

@@ -18,7 +18,6 @@ const FighterList = ({weightclass}) => {
     useEffect(() => {
         Axios.get("http://localhost:3001/getFighters").then((response)=>{
           setListOfFighters(response.data)
-          console.log(response.data)
                 })   
               }, [])
     
@@ -29,7 +28,7 @@ const FighterList = ({weightclass}) => {
 
     return (
         <div className="listOfFighters">
-          {listOfFighters.sort((a,b)=> {return a.rank - b.rank}).filter(fighter => fighter.weightClass === weightclass).map((fighter,index)=>{ 
+          {listOfFighters.sort((a,b)=> {return a.rank - b.rank}).filter(fighter =>fighter.rank <=10 && fighter.weightClass === weightclass).map((fighter,index)=>{ 
             return( <FighterCard key={fighter._id} fighter={fighter} updateOrder={updateOrder}/> 
             )})}
           </div>

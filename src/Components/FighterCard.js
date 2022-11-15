@@ -59,8 +59,8 @@ const FighterCard = ({fighter, updateOrder}) => {
             <span>Height:{fighter.height}</span>
             </div>
             <div className="changeRank">
-                <button className="btnUp" onClick={increaseRank}><FontAwesomeIcon className="arrowUp" icon={faArrowUp}/></button>
-                <button className="btnDown" onClick={decreaseRank} ><FontAwesomeIcon className="arrowDown" icon={faArrowDown}/></button>
+                <button className="btnUp" onClick={increaseRank}><FontAwesomeIcon className="arrowUp" icon={faArrowUp}/>rank</button>
+                <button className="btnDown" onClick={decreaseRank} ><FontAwesomeIcon className="arrowDown" icon={faArrowDown}/>rank</button>
             </div>
             </div>
             
