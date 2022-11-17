@@ -23,7 +23,7 @@ import '../Styles/UpdateCard.css'
 
     return(
         <div>
-        <div>
+        <div className="selectBar">
             <label name="weight-class">Select a divison to see all fighters and update</label>
           <select value={selectOption} onChange={handleChange}>
             <option>Select Weightclass</option>
@@ -36,7 +36,7 @@ import '../Styles/UpdateCard.css'
             <option value="Light Heavyweight">Light Heavyweight</option>
             <option value="Heavyweight">Heavyweight</option>
           </select>
-          <button onClick={getFighter}>Filter Fighters</button>
+          <button onClick={getFighter}>Get Fighters</button>
         </div>
         <div className="updateContainer">
           {allFighters.sort((a,b)=> {return a.rank - b.rank}).map((fighter,index)=>{

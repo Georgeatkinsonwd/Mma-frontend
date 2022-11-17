@@ -72,9 +72,9 @@ export default function UpdateCard({fighter, getFighter}){
         <div className = "updateCard">
             <h3>{fighter.name}</h3>
             <p>Age:{age} <button onClick={increaseAge}>+</button> <button onClick={decreaseAge}>-</button></p> 
-            <p>Record:{fighter.record} <input onChange={(event)=>setRecord(event.target.value)} class="recordInput"></input><button onClick={updateRecord}>Update</button></p> 
+            <p>Record:{fighter.record} <input onChange={(event)=>setRecord(event.target.value)} className="recordInput"></input><button onClick={updateRecord}>Update</button></p> 
             <p>Rank:{rank} <button onClick={increaseRank}>+</button> <button onClick={decreaseRank}>-</button></p> 
-            <button class="deleteBtn" onClick={deleteFighter}>Delete</button>
+            <button className="deleteBtn" onClick={deleteFighter}>Delete</button>
             
         </div>
     

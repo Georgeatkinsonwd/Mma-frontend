@@ -11,8 +11,9 @@ const Selection = () => {
       }
 
     return (
-        <div>
-            <label name="weight-class">Select a Weightclass to see top 10 in that divison</label>
+        <div className="top10">
+          <div className="selectBar">
+            <label className="labelBar" name="weight-class">Select a Weightclass to see top 10 in that divison</label>
           <select value={selectOption} onChange={handleChange}>
             <option>Select Weightclass</option>
             <option value="Flyweight">Flyweight</option>
@@ -24,6 +25,7 @@ const Selection = () => {
             <option value="Light Heavyweight">Light Heavyweight</option>
             <option value="Heavyweight">Heavyweight</option>
           </select>
+          </div>
           <div className="fighterList">
           <FighterList weightclass={selectOption} />
           </div>

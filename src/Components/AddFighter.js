@@ -53,7 +53,7 @@ const AddFighter = () => {
           <input value={rank} type="number" placeholder='rank' onChange={(e) => {setRank(e.target.value)}}></input>
           <input value={record} type="text" placeholder='record (W-L-D)' onChange={(e)=> { setRecord(e.target.value)}}></input>
           <input value={age} type="number" placeholder='age' onChange={(e)=> { setAge(e.target.value)}}></input>
-          <input value={height} type="text" placeholder='height' onChange={(e)=> { setHeight(e.target.value)}}></input>
+          <input value={height} type="text" placeholder="height in ft/in" onChange={(e)=> { setHeight(e.target.value)}}></input>
           <input value={weightClass} type="text" placeholder='Weightclass' onChange={(e)=> { setWeightClass(e.target.value)}}></input>
           <input value={imgSrc} type="text" placeholder="image source" onChange={(e)=> {setImgSrc(e.target.value)}}></input>
           <button type="submit" onClick={createFighter}>Add Fighter</button>

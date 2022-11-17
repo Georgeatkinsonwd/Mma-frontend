@@ -1,7 +1,23 @@
 
 .fighterList {
-    margin-top:20px;
+    /* margin-top:20px; */
     display:flex;
      flex-wrap:wrap;
      width:100%;
    }
+
+.top10 {
+  display:block;
+  color:black;
+  height:100%;
+  width:100%;
+
+}
+
+.selectBar{
+  display:flex;
+  height:75px;
+  margin:0;
+  align-items:center;
+  justify-content: center;
+}
