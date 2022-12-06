@@ -7,8 +7,9 @@ const Selection = () => {
 
     const handleChange = (e) => {
         setSelectOption(e.target.value)
-        
       }
+  
+    
 
     return (
         <div className="top10">
@@ -26,7 +27,7 @@ const Selection = () => {
             <option value="Heavyweight">Heavyweight</option>
           </select>
           </div>
-          <div className="fighterList">
+          <div>
           <FighterList weightclass={selectOption} />
           </div>
         </div>

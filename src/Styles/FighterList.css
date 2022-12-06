@@ -4,3 +4,14 @@
       flex-wrap:wrap;
       width:100%;
     }
+
+
+.btnCont {
+  height:20px;
+  margin-bottom:10px;
+}
+
+.top10Btn {
+  display:block;
+  margin:0 auto;
+}
