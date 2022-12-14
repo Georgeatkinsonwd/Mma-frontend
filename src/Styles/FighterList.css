@@ -14,4 +14,11 @@
 .top10Btn {
   display:block;
   margin:0 auto;
+  background: rgb(126,126,126);
+  background: linear-gradient(183deg, rgba(126,126,126,1) 23%, rgba(0,0,0,1) 78%);
+  color:white;
+}
+
+.top10Btn:hover {
+  color:gold;
 }

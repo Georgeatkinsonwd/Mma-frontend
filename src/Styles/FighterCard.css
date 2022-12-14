@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Roboto:ital,wght@1,100&display=swap');
+
+body {
+  font-family: 'EB Garamond', serif;
+  font-weight:600;
+}
+
+
 .fighterDetails {
   box-sizing: border-box;
     display:flex;
@@ -28,7 +36,7 @@
     margin:0;
     background: rgb(126,126,126);
     background: linear-gradient(183deg, rgba(126,126,126,1) 23%, rgba(0,0,0,1) 78%);
-    height:25%;
+    height:30%;
   }
 
   .fighterName {
@@ -62,5 +70,31 @@ width:200px;
 
 .spanDetails {
   font-size:17px;
-  font-weight:bold;
+  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+}
+
+.spanDetails svg {
+  vertical-align: middle;
+}
+
+.starRank {
+  color:gold;
+}
+
+.record {
+  color: blue;
+}
+
+.age{
+  color: red
+}
+
+.height {
+  color:green;
+}
+
+.nickname {
+  color: orange;
 }
